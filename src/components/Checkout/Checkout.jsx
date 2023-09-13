@@ -56,10 +56,10 @@ const Checkout = () => {
 
     const getTotalCost = () => {
         let ticketCost = pricePerTicket * ticketNumber;
-        let serviceFee = Math.round(0.19249 * pricePerTicket * ticketNumber * 100) / 100;
+        let serviceFee = 0.19249 * pricePerTicket * ticketNumber;
         let orderProcessingFee = 2.95;
 
-        return ticketCost + serviceFee + orderProcessingFee;
+        return (ticketCost + serviceFee + orderProcessingFee).toFixed(2);
     }
 
     const deleteSavedCreditCard = (cardNumber) => {
@@ -245,33 +245,37 @@ const Checkout = () => {
                                 </div>
 
                                 <div className="savedCreditCardsContainer slightMarginLeft">
-                                    {savedCreditCards.map((card, index) => {
-                                        return (
-                                            <div className="radio" key={card.cardNumber}>
-                                                <input id="radio-1" name="radio" type="radio" />
-                                                <img className='visaIcon' src='/src/assets/visaIcon.png'/>
-                                                <div className="savedCreditCardDetails">
-                                                    <span>Visa - {card.cardNumber.slice(-4)}</span>
-                                                    {card.nameOnCard} | exp. {card.expirationDate}
-                                                    <div>
-                                                        <span className='blueClickableText' onClick={() => {
-                                                            setEditingCreditCard(true);
-                                                            setSelectedCreditCard(card);
-                                                            setCardChangingIndex(index);
-                                                        }}>
-                                                            Edit
-                                                        </span>
-                                                        &nbsp;|&nbsp; 
-                                                        <span className='blueClickableText' onClick={() => {
-                                                            deleteSavedCreditCard(card.cardNumber);
-                                                        }}>
-                                                            Delete
-                                                        </span>
-                                                    </div>
+                                    <div className="radioToolbar" >
+                                        {savedCreditCards.map((card, index) => {
+                                            return (
+                                                <div className="creditCardRow flexDisplay">
+                                                    <input id="radio-1" name="radio" type="radio" />
+                                                    <label className=" creditCardLabel flexDisplay">
+                                                        <img className='visaIcon' src='/src/assets/visaIcon.png'/>
+                                                        <div className="savedCreditCardDetails">
+                                                            <span>Visa - {card.cardNumber.slice(-4)}</span>
+                                                            {card.nameOnCard} | exp. {card.expirationDate}
+                                                            <div>
+                                                                <span className='blueClickableText' onClick={() => {
+                                                                    setEditingCreditCard(true);
+                                                                    setSelectedCreditCard(card);
+                                                                    setCardChangingIndex(index);
+                                                                }}>
+                                                                    Edit
+                                                                </span>
+                                                                &nbsp;|&nbsp; 
+                                                                <span className='blueClickableText' onClick={() => {
+                                                                    deleteSavedCreditCard(card.cardNumber);
+                                                                }}>
+                                                                    Delete
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </label>
                                                 </div>
-                                            </div>
-                                        );
-                                    })}
+                                            );
+                                        })}
+                                    </div>
                                 </div>
 
                                 <div className="addNewCardContainer">
@@ -318,8 +322,8 @@ const Checkout = () => {
                         </div>
                         <br />
                         <div className="spaceBetweenFlex">
-                            <span>Service Fee: ${0.19249 * pricePerTicket} x {ticketNumber}</span>
-                            <span>${Math.round(0.19249 * pricePerTicket * ticketNumber * 100) / 100}</span>
+                            <span>Service Fee: ${(0.19249 * pricePerTicket).toFixed(2)} x {ticketNumber}</span>
+                            <span>${(0.19249 * pricePerTicket * ticketNumber).toFixed(2)}</span>
                         </div>
                         <div className="spaceBetweenFlex">
                             <span>Order Processing Fee</span>

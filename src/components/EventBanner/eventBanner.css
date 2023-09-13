@@ -3,6 +3,23 @@
     flex-direction: row;
     margin: 20px;
     justify-content: center;
+
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .eventBannerContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        justify-content: center;
+
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        padding: 20px;
+    }
 }
 
 .eventDetails {
