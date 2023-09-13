@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 305px;
+  height: 225px;
+}
+
+.micketTasterTitle {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+  font-size: 40px;
+}
+
+.selectionText {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.eventBanners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap
+}

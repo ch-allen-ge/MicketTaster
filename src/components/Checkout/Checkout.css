@@ -1,0 +1,158 @@
+input {
+    width: 100%;
+    height: 25px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.saveNewCreditCardButton {
+    background-color: blue;
+    color: white;
+    width: 100%;
+}
+
+.flexDisplay {
+    display: flex;
+}
+
+.smallText {
+    font-size: 5px;
+}
+
+.checkoutContainer {
+    margin: 30px 250px;
+    display: flex;
+    flex-direction: row;
+}
+
+.deliveryPaymentContainer {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 20px;
+    width: 60%;
+}
+
+.totalContainer {
+    width: 40%;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid #899499;
+    border-radius: 5px;
+}
+
+.slightMarginLeft {
+    margin-left: 15px;
+}
+
+.addNewCard {
+    display: flex;
+    flex-direction: row;
+}
+
+.addNewCardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0px 20px 15px; 
+}
+
+.useCreditDebitText {
+    margin: 20px 0px;
+}
+
+.savedCreditCardsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio {
+    display: flex;
+    margin: 15px 0px;
+}
+
+input[type='radio'] { 
+    height: 25px;
+    width: 25px;
+    margin: 0px 10px 10px 0px;
+}
+
+.termsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.termsContainer > input{
+    width: auto;
+}
+
+.blueClickableText {
+    color: blue;
+}
+
+.blueClickableText:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.visaIcon {
+    width: 60px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.savedCreditCardDetails {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+.subTitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.greyText {
+    color: 	#808080;
+}
+
+.spaceBetweenFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.greenCheckMark {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.backToStoredCards {
+    font-weight: bold;
+    color: blue;
+}
+
+.backToStoredCards:hover {
+    cursor: pointer;
+}
